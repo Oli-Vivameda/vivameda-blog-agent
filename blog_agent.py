@@ -167,11 +167,14 @@ def step_generate(client: anthropic.Anthropic, topic_info: dict) -> str:
             client,
             SYSTEM_PROMPT,
             f"The following blog post is too short at {word_count} words. "
-            f"Expand it to {TARGET_WORD_COUNT_MIN}–{TARGET_WORD_COUNT_MAX} words "
+            f"Expand it to {TARGET_WORD_COUNT_MIN} to {TARGET_WORD_COUNT_MAX} words "
             f"while maintaining the same voice and structure. Add depth to existing "
-            f"sections — do NOT add filler.\n\n{post_markdown}",
+            f"sections, do NOT add filler.\n\n{post_markdown}",
         )
         logger.info(f"📝 Expanded to {len(post_markdown.split())} words")
+
+    # Strip any em/en dashes that slipped through
+    post_markdown = post_markdown.replace("—", ",").replace("–", ",")
 
     return post_markdown
 
