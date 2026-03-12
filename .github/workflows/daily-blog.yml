@@ -48,11 +48,11 @@ jobs:
       - name: WhatsApp success
         if: success()
         run: |
-          MSGS=("Fresh+blog+post+just+dropped+on+vivameda.com.+You+didn't+even+have+to+wake+up." "Blog+is+live.+Another+banger+nobody+asked+for+but+everyone+needs." "New+post+on+the+site.+Your+content+machine+never+sleeps." "Blog+done.+Published.+SEO+juice+flowing.+You're+welcome+boss.")
+          MSGS=("Vinnie+here.+Fresh+blog+post+on+vivameda.com.+You+didn't+even+have+to+wake+up+for+this." "It's+Vinnie.+Blog+is+live.+Another+masterpiece+nobody+asked+for." "Vinnie+dropping+knowledge.+New+blog+post+published.+SEO+juice+flowing." "Yo+Vinnie+here.+Blog+done.+Your+content+machine+never+sleeps+and+neither+do+I.")
           MSG=${MSGS[$RANDOM % ${#MSGS[@]}]}
           curl -s "https://api.callmebot.com/whatsapp.php?phone=4915129005414&text=$MSG&apikey=5944134"
 
       - name: WhatsApp failure
         if: failure()
         run: |
-          curl -s "https://api.callmebot.com/whatsapp.php?phone=4915129005414&text=Yo.+Blog+agent+crashed.+No+post+today+unless+you+fix+this.+Check+GitHub+Actions.&apikey=5944134"
+          curl -s "https://api.callmebot.com/whatsapp.php?phone=4915129005414&text=Vinnie+here.+Blog+agent+crashed.+No+post+today+unless+you+fix+this.+I+tried+boss.+Check+GitHub+Actions.&apikey=5944134"
