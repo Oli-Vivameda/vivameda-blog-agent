@@ -2,7 +2,6 @@ name: Daily Blog Post
 
 on:
   schedule:
-    # Runs every day at 07:00 UTC (09:00 Cyprus time)
     - cron: "0 7 * * *"
   workflow_dispatch:  # Manual trigger
 
@@ -41,13 +40,17 @@ jobs:
           git config user.name "Vivameda Blog Agent"
           git config user.email "blog-agent@vivameda.com"
           git add output/
-          # Only commit if there are changes
           git diff --staged --quiet || {
-            git commit -m "📝 Daily blog post - $(date +%Y-%m-%d)"
+            git commit -m "Daily blog post - $(date +%Y-%m-%d)"
             git push
           }
 
-      - name: WhatsApp alert on failure
+      - name: WhatsApp success
+        if: success()
+        run: |
+          curl -s "https://api.callmebot.com/whatsapp.php?phone=4915129005414&text=VIVAMEDA:+New+blog+post+published+on+vivameda.com&apikey=5944134"
+
+      - name: WhatsApp failure
         if: failure()
         run: |
           curl -s "https://api.callmebot.com/whatsapp.php?phone=4915129005414&text=VIVAMEDA+ALERT:+Daily+Blog+Post+FAILED.+Check+GitHub+Actions.&apikey=5944134"
