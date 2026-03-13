@@ -33,7 +33,7 @@ jobs:
           SUPABASE_FUNCTION_URL: ${{ secrets.SUPABASE_FUNCTION_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
           BLOG_OUTPUT_DIR: "./output"
-        run: python blog_agent.py
+        run: python blog_agent.py --publish
 
       - name: Commit and push new post
         run: |
