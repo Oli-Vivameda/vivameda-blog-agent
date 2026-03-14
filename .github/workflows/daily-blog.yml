@@ -2,8 +2,8 @@ name: Daily Blog Post
 
 on:
   schedule:
-    - cron: "0 7 * * *"
-  workflow_dispatch:  # Manual trigger
+    - cron: "0 7 * * 1,3,5"  # Mon, Wed, Fri at 07:00 UTC (09:00 Cyprus)
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -42,7 +42,8 @@ jobs:
           git add output/
           git diff --staged --quiet || {
             git commit -m "Daily blog post - $(date +%Y-%m-%d)"
-            git push
+            git pull --rebase origin main || true
+            git push || true
           }
 
       - name: WhatsApp success
