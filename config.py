@@ -129,3 +129,9 @@ SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY", "")
 SITE_NAME = "Vivameda"
 SITE_URL = "https://vivameda.com"
 AUTHOR_NAME = "Vivameda Intelligence"
+
+# Blog generation settings
+MAX_TOKENS = 4096
+OUTPUT_DIR = BLOG_OUTPUT_DIR
+TARGET_WORD_COUNT_MIN = 800
+TARGET_WORD_COUNT_MAX = 1500
