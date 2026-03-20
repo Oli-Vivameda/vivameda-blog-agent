@@ -15,92 +15,65 @@ BLOG_OUTPUT_DIR = os.getenv("BLOG_OUTPUT_DIR", "./output")
 # The blog agent's job: find trending news in ANY of these areas,
 # then Claude flips it into a Vivameda workforce intelligence angle.
 TOPIC_DOMAINS = [
-    # Core
-    "workforce intelligence",
-    "people analytics trends",
-    "talent data insights",
-    "organizational intelligence",
-    "labor market analysis",
-    "HR technology news",
+    # Investment & Alternative Data
+    "alternative data investing trends",
+    "venture capital deal intelligence",
+    "private equity data due diligence",
+    "hedge fund alternative data",
+    "M&A market intelligence data",
+    "ESG data analytics investing",
+    "portfolio analytics technology",
+    "investment research data tools",
+    "alpha generation data signals",
+    "quant fund data strategy",
 
-    # AI & ML
-    "artificial intelligence jobs impact",
-    "generative AI workforce",
-    "machine learning enterprise",
-    "AI automation replacing jobs",
-    "AI hiring tools trends",
+    # AI & Machine Learning
+    "machine learning training data",
+    "enterprise AI adoption trends",
+    "foundation model competition",
+    "AI infrastructure spending",
+    "synthetic data market",
     "large language model business",
+    "AI agent automation business",
+    "AI regulation policy",
+    "generative AI revenue models",
+    "AI chip semiconductor competition",
 
-    # Big data & infrastructure
-    "big data market trends",
-    "data infrastructure spending",
-    "data pipeline engineering",
-    "Snowflake Databricks news",
-    "data governance enterprise",
-    "data quality management",
-    "data monetization business",
-    "data marketplace trends",
-    "data privacy regulation",
+    # Data Industry & Infrastructure
+    "data marketplace business model",
+    "data monetization strategy",
+    "data as a service market",
+    "data governance compliance",
+    "data quality enterprise",
+    "cloud data warehouse trends",
+    "data licensing business",
+    "data broker regulation",
+    "data privacy regulation impact",
+    "real time data analytics",
 
-    # Business intelligence
+    # Corporate Strategy & Intelligence
+    "competitive intelligence technology",
+    "market intelligence platform",
     "business intelligence trends",
     "predictive analytics enterprise",
-    "competitive intelligence tools",
-    "market intelligence platform",
+    "corporate strategy data driven",
+    "decision intelligence analytics",
+    "company growth signals data",
+    "digital transformation metrics",
+    "strategic workforce planning",
+    "B2B sales intelligence",
 
-    # B2B & SaaS
-    "B2B data industry news",
-    "SaaS growth metrics",
-    "startup funding news",
-    "vertical SaaS trends",
-    "API economy growth",
-
-    # Investment
-    "alternative data investing",
-    "private equity acquisitions",
-    "human capital due diligence",
-    "headcount data investment",
-    "ESG workforce metrics",
-
-    # Economics
-    "labor market report",
-    "wage growth trends",
-    "job openings data",
-    "remote work productivity",
-    "gig economy statistics",
-
-    # Industry verticals
-    "marketing agency industry",
-    "fintech hiring trends",
-    "cybersecurity talent gap",
-    "climate tech workforce",
-    "healthcare staffing shortage",
-    "semiconductor workforce",
-
-    # Future of work
-    "four day work week data",
-    "hybrid work research",
-    "employee burnout data",
-    "upskilling reskilling trends",
-    "digital nomad workforce",
-
-    # Geopolitics
-    "US China tech talent",
-    "nearshoring reshoring jobs",
-    "India tech outsourcing",
-    "European tech trends",
-
-    # Contrarian
-    "HR tech failing",
-    "job title inflation",
-    "quiet quitting data",
-    "performance review broken",
-
-    # Emerging tech
-    "quantum computing talent",
-    "robotics workforce",
-    "autonomous vehicles jobs",
-    "edge computing growth",
+    # Industry News & Trends
+    "technology industry news",
+    "startup funding rounds",
+    "fintech industry trends",
+    "cybersecurity industry news",
+    "climate tech business",
+    "semiconductor industry trends",
+    "biotech pharma deals",
+    "robotics automation industry",
+    "quantum computing business",
+    "space industry commercial",
 ]
 
 # Keywords to boost relevance (expanded)
