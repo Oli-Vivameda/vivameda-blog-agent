@@ -66,4 +66,4 @@ Requirements:
 
 ---
 
-**Vivameda tracks 250M+ professional records for investment research, corporate strategy, and machine learning. [Request a data sample](https://vivameda.com/contact) to see what workforce intelligence looks like at scale.**"""
+**Vivameda tracks 250M+ professional records for investment research, corporate strategy, and machine learning. [Request a data sample](https://calendly.com/oli-nold/data-discussion-call) to see what workforce intelligence looks like at scale.**"""
