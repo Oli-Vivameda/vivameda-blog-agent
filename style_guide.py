@@ -61,4 +61,9 @@ Requirements:
 - First line must be: # [Your Title Here]
 - Second line must be: META: [A 150-character meta description]
 - Write in Vivameda's voice: sharp, data-driven, contrarian
-- No em dashes or en dashes. Use commas, semicolons, colons, or periods instead."""
+- No em dashes or en dashes. Use commas, semicolons, colons, or periods instead.
+- End every post with this exact CTA section (after your closing statement):
+
+---
+
+**Vivameda tracks 250M+ professional records for investment research, corporate strategy, and machine learning. [Request a data sample](https://vivameda.com/contact) to see what workforce intelligence looks like at scale.**"""
